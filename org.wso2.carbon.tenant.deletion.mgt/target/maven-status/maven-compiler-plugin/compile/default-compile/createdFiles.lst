@@ -1,0 +1,7 @@
+org/wso2/carbon/tenant/deletion/mgt/util/TenantdeletionUtil.class
+org/wso2/carbon/tenant/deletion/mgt/internal/TenantdeletionManagerComponent.class
+org/wso2/carbon/tenant/deletion/mgt/TenantDeletionManagerImplementation.class
+org/wso2/carbon/tenant/deletion/mgt/TenantDeletionManager.class
+org/wso2/carbon/tenant/deletion/mgt/exception/TenantDeletionManagementException.class
+org/wso2/carbon/tenant/deletion/mgt/TenantDeletionConstants.class
+org/wso2/carbon/tenant/deletion/mgt/model/TenantData.class

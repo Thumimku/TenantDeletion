@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1541093696050
+Build-Jdk: 1.8.0_171
+Built-By: thumilan
+Bundle-ManifestVersion: 2
+Bundle-Name: org.wso2.carbon.tenant.deletion.mgt
+Bundle-SymbolicName: org.wso2.carbon.tenant.deletion.mgt
+Bundle-Version: 1.0.0.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+DynamicImport-Package: *
+Export-Package: org.wso2.carbon.tenant.deletion.mgt;uses:="org.wso2.carb
+ on.tenant.deletion.mgt.exception,org.wso2.carbon.tenant.deletion.mgt.mo
+ del";version="1.0.0.SNAPSHOT",org.wso2.carbon.tenant.deletion.mgt.excep
+ tion;version="1.0.0.SNAPSHOT",org.wso2.carbon.tenant.deletion.mgt.model
+ ;version="1.0.0.SNAPSHOT",org.wso2.carbon.tenant.deletion.mgt.util;vers
+ ion="1.0.0.SNAPSHOT"
+Import-Package: org.osgi.framework;version="[1.7.0,2.0.0)",org.osgi.serv
+ ice.component;version="[1.2.0,2.0.0)"
+Service-Component: OSGI-INF/org.wso2.carbon.tenant.deletion.mgt.internal
+ .TenantdeletionManagerComponent.xml
+Tool: Bnd-2.1.0.20130426-122213

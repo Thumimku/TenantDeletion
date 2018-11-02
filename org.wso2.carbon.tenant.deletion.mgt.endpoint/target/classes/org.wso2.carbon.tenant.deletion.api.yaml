@@ -1,0 +1,74 @@
+swagger: "2.0"
+info:
+  description: "A **RESTful API** to delete teanant for **WSO2 Identity Server** <br/> Written with [swagger 2](https://swagger.io/)"
+  version: "1.0.0"
+  title: "WSO2 Identity Server Rest API - Tenant Deletion"
+  contact:
+    name: "WSO2"
+    url: "http://wso2.com/products/identity-server/"
+    email: "architecture@wso2.org"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "localhost"
+basePath: "/t/{tenant-domain}/api/identity/tenant/v1.0.0"
+schemes:
+- "https"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+security:
+- UserSecurity: []
+paths:
+  /delete:
+    delete:
+      summary: "Delete a tenant"
+      description: "This API is used to delete a tenant.\n"
+      operationId: "deleteTenant"
+      produces:
+      - "application/json"
+      responses:
+        202:
+          description: "Tenant deleted"
+          schema:
+            $ref: "#/definitions/DeleteTenantResponse"
+        400:
+          description: "Bad Request"
+          schema:
+            $ref: "#/definitions/Error"
+        401:
+          description: "Unauthorized"
+          schema:
+            $ref: "#/definitions/Error"
+        404:
+          description: "Not Found"
+          schema:
+            $ref: "#/definitions/Error"
+        500:
+          description: "Server Error"
+          schema:
+            $ref: "#/definitions/Error"
+securityDefinitions:
+  UserSecurity:
+    type: "basic"
+definitions:
+  Error:
+    type: "object"
+    properties:
+      code:
+        type: "string"
+      message:
+        type: "string"
+      description:
+        type: "string"
+  DeleteTenantResponse:
+    type: "object"
+    properties:
+      tenant_name:
+        type: "string"
+      deleted-by:
+        type: "string"
+    example:
+      deleted-by: "deleted-by"
+      tenant_name: "admin"

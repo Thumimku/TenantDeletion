@@ -1,0 +1,9 @@
+org/wso2/carbon/tenant/deletion/mgt/endpoint/impl/DeleteApiServiceImpl.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/ApiResponseMessage.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/factories/DeleteApiServiceFactory.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/DeleteApiService.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/ApiException.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/DeleteApi.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/dto/ErrorDTO.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/dto/DeleteTenantResponseDTO.class
+org/wso2/carbon/tenant/deletion/mgt/endpoint/util/TenantDeletionEndpointUtil.class

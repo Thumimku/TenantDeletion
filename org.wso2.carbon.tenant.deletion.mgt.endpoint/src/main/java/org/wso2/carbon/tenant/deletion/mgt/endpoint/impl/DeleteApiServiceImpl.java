@@ -30,7 +30,7 @@ public class DeleteApiServiceImpl extends DeleteApiService {
 
             try {
 
-                TenantData tenantData = TenantDeletionEndpointUtil.getTenantDeletionManager().DeleteTenant(PrivilegedCarbonContext.getThreadLocalCarbonContext().getTenantDomain());
+                TenantData tenantData = TenantDeletionEndpointUtil.getTenantDeletionManager().DeleteTenant(PrivilegedCarbonContext.getThreadLocalCarbonContext().getTenantId());
             } catch (TenantDeletionManagementException e) {
                 log.error(e.getMessage());
             } catch (Throwable e){

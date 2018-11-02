@@ -10,10 +10,10 @@ public interface TenantDeletionManager {
 
     /**
      * API method is used to tenant deletion
-     * @param tenantDomain TenantDomain which has to be deleted
+     * @param tenantID Tenant ID which has to be deleted
      * @return TenantData
      * @throws TenantDeletionManagementException Tenant Deletion Management Exception
      */
-    TenantData DeleteTenant(String tenantDomain) throws TenantDeletionManagementException;
+    TenantData DeleteTenant(int tenantID) throws TenantDeletionManagementException;
 
 }

@@ -3,41 +3,32 @@ package org.wso2.carbon.tenant.deletion.mgt.exception;
 /**
  * Exception class for TenantDeletionManager
  */
-public class TenantDeletionManagementException extends Exception {
+public class TenantDeletionDBException extends TenantDeletionManagementException {
 
     private String errorCode;
 
-    public TenantDeletionManagementException()
+    public TenantDeletionDBException()
 
     {
 
         super();
     }
 
-    public TenantDeletionManagementException(String message, String errorCode) {
+    public TenantDeletionDBException(String message, String errorCode) {
 
         super(message);
         this.errorCode = errorCode;
     }
 
-    public TenantDeletionManagementException(String message, String errorCode, Throwable cause) {
+    public TenantDeletionDBException(String message, String errorCode, Throwable cause) {
 
         super(message, cause);
         this.errorCode = errorCode;
     }
 
-    public TenantDeletionManagementException(Throwable cause) {
+    public TenantDeletionDBException(Throwable cause) {
 
         super(cause);
-    }
-    public TenantDeletionManagementException(String message) {
-
-        super(message);
-    }
-
-    public TenantDeletionManagementException(String message , Throwable cause) {
-
-        super(message,cause);
     }
 
     public String getErrorCode() {

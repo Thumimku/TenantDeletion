@@ -33,9 +33,9 @@ public class TenantdeletionManagerComponent {
     protected void activate(ComponentContext componentContext) {
         try {
             BundleContext bundleContext = componentContext.getBundleContext();
-//            DataSource dataSource = IdentityDatabaseUtil.getDataSource();
-//            DatabaseUtil.getDBConnection(dataSource);
-//            setDataSourceToDataHolder(dataSource);
+            DataSource dataSource = IdentityDatabaseUtil.getDataSource();
+            DatabaseUtil.getDBConnection(dataSource);
+            setDataSourceToDataHolder(dataSource);
 
             bundleContext.registerService(TenantDeletionManager.class, new TenantDeletionManagerImplementation(),null);
             log.info("Tenant deletion bundle is activated");
@@ -48,13 +48,13 @@ public class TenantdeletionManagerComponent {
         }
     }
 
-//    private void setDataSourceToDataHolder(DataSource dataSource) {
-//
-//        TemplateManagerComponentDataHolder.getInstance().setDataSource(dataSource);
-//        if (log.isDebugEnabled()) {
-//            log.debug("Data Source is set to the Template Management Service.");
-//        }
-//    }
+    private void setDataSourceToDataHolder(DataSource dataSource) {
+
+        TenantDeletionManagerComponentDataHolder.getInstance().setDataSource(dataSource);
+        if (log.isDebugEnabled()) {
+            log.debug("Data Source is set to the Template Management Service.");
+        }
+    }
 
 
     @Reference(
